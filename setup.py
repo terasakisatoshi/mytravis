@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 import sys
 
-sys.append("./src")
-sys.append("./tests")
+sys.path.append('./src')
+sys.path.append('./tests')
 
 setup(
     name="CITest",
