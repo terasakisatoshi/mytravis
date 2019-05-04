@@ -1,20 +1,11 @@
-import unittest
-from myscript import MyClass
+from mypack import ret_one, twice
 
-class MyClassTest(unittest.TestCase):
+def test_twice():
+    x = 1
+    expected = 2
+    assert twice(x) == expected
 
-    def setUp(self):
-        print("setup test")
+def test_ret_one():
+    expected = 1
+    assert ret_one()==expected
 
-    def test_first(self):
-        print("test started")
-
-    def test_myclass(self):
-        klass=MyClass()
-        self.assertTrue(klass.index())
-
-
-def suite():
-    suite=unittest.TestSuite()
-    suite.addTests(unittest.makeSuite(MyClassTest))
-    return suite
